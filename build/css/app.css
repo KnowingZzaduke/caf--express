@@ -29,73 +29,65 @@ header .content_header-left .content_logo img {
   width: 100px;
 }
 header .content_header-center {
+  grid-column: 3/4;
+}
+header .content_header-center .content_toggle-hamburguesa {
   text-align: center;
 }
-header .content_header-right .content_toggle-hamburguesa {
-  text-align: center;
-}
-header .content_header-right .content_toggle-hamburguesa i {
-  font-size: 1.5rem;
-}
-header .content_header-right .content_menu {
-  background-color: #198edd;
-  position: fixed;
-  top: 0%;
-  bottom: 0%;
-  right: 0%;
-  z-index: 1;
-}
-header .content_header-right .content_menu .content_toggle-cerrar {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  text-align: center;
-  align-items: center;
-}
-header .content_header-right .content_menu .content_toggle-cerrar h4 {
+header .content_header-center .content_toggle-hamburguesa i {
   font-size: 1.3rem;
 }
-header .content_header-right .content_menu .content_toggle-cerrar i {
-  font-size: 2rem;
+header .content_header-center .content_menu {
+  position: fixed;
+  background-color: #f4d03f;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  transition: 0.25s ease;
 }
-header .content_header-right .content_menu .content_enlaces-secciones .enlaces ul {
+header .content_header-center .content_menu .content_toggle-cerrar {
+  text-align: end;
+}
+header .content_header-center .content_menu .content_toggle-cerrar i {
+  font-size: 2rem;
+  padding: 5px;
+}
+header .content_header-center .content_menu .content_enlaces-secciones .enlaces ul {
   padding: 0%;
 }
-header .content_header-right .content_menu .content_enlaces-secciones .enlaces ul li {
-  background-color: #f4d03f;
-  width: 90%;
-  margin: 1rem auto;
-  padding: 7px 5px;
+header .content_header-center .content_menu .content_enlaces-secciones .enlaces ul li {
+  background-color: black;
+  padding: 10px 0;
+  margin: 0% 10px;
+  margin-top: 1rem;
+  text-align: center;
+  width: 150px;
   border-radius: 10px;
+}
+header .content_header-center .content_menu .content_enlaces-secciones .enlaces ul li a {
+  color: white;
+}
+header .content_header-center .menu-none {
+  transition: 0.25s ease;
+  width: 0%;
+}
+header .content_header-right {
+  grid-column: 2/3;
+  grid-row: 1;
+}
+header .content_header-right .content_fecha {
   text-align: center;
 }
 
-@media only screen and (min-width: 62rem) {
-  header .content_header-left .content_logo img {
-    width: 150px;
-  }
-}
-
-@media only screen and (min-width: 82rem) {
-  header .content_header-left .content_logo img {
-    width: 150px;
-  }
+@media only screen and (min-width: 48rem) {
   header .content_header-center {
-    grid-column: 3/4;
-  }
-  header .content_header-right {
+    display: block;
     grid-column: 2/3;
-    grid-row: 1/2;
   }
-  header .content_header-right .content_toggle-hamburguesa {
+  header .content_header-center .content_toggle-hamburguesa {
     display: none;
   }
-  header .content_header-right .content_menu {
-    display: block;
-    background-color: white;
-    position: relative;
-    top: 0%;
-    bottom: 0%;
-    right: 0%;
-    z-index: 1;
+  header .content_header-right {
+    grid-column: 3/4;
   }
 }
