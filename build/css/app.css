@@ -7,6 +7,7 @@ html {
 
 body {
   font-family: "Open Sans", sans-serif;
+  margin: 0%;
 }
 
 ul, li {
@@ -37,25 +38,26 @@ header .content_header-center .content_toggle-hamburguesa {
 header .content_header-center .content_toggle-hamburguesa i {
   font-size: 1.3rem;
 }
-header .content_header-center .content_menu {
+header .content_header-center .menu {
   position: fixed;
   background-color: #f4d03f;
   top: 0;
   bottom: 0;
   right: 0;
-  transition: 0.25s ease;
+  transition: 1s;
+  overflow: hidden;
 }
-header .content_header-center .content_menu .content_toggle-cerrar {
+header .content_header-center .menu .content_toggle-cerrar {
   text-align: end;
 }
-header .content_header-center .content_menu .content_toggle-cerrar i {
+header .content_header-center .menu .content_toggle-cerrar i {
   font-size: 2rem;
   padding: 5px;
 }
-header .content_header-center .content_menu .content_enlaces-secciones .enlaces ul {
+header .content_header-center .menu .content_enlaces-secciones .enlaces ul {
   padding: 0%;
 }
-header .content_header-center .content_menu .content_enlaces-secciones .enlaces ul li {
+header .content_header-center .menu .content_enlaces-secciones .enlaces ul li {
   background-color: black;
   padding: 10px 0;
   margin: 0% 10px;
@@ -63,29 +65,82 @@ header .content_header-center .content_menu .content_enlaces-secciones .enlaces 
   text-align: center;
   width: 150px;
   border-radius: 10px;
+  transition: 0.25s ease;
 }
-header .content_header-center .content_menu .content_enlaces-secciones .enlaces ul li a {
+header .content_header-center .menu .content_enlaces-secciones .enlaces ul li a {
   color: white;
 }
-header .content_header-center .menu-none {
-  transition: 0.25s ease;
-  width: 0%;
+header .content_header-center .menu_none {
+  transition: 0.35s;
+  position: fixed;
+  right: 0;
+  width: 0;
 }
 header .content_header-right {
   grid-column: 2/3;
   grid-row: 1;
 }
 header .content_header-right .content_fecha {
+  background-color: #c0392b;
+  border-radius: 10px;
   text-align: center;
+  color: white;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  margin: 0% auto;
+}
+
+@media only screen and (min-width: 30.063rem) {
+  header .content_header-left .content_logo img {
+    width: 150px;
+  }
+  header .content_header-center .menu .content_enlaces-secciones .enlaces ul li {
+    width: 200px;
+    transition: 0.25s ease;
+  }
 }
 
 @media only screen and (min-width: 48rem) {
+  header .content_header-left {
+    text-align: center;
+  }
   header .content_header-center {
     display: block;
     grid-column: 2/3;
   }
   header .content_header-center .content_toggle-hamburguesa {
     display: none;
+  }
+  header .content_header-center .menu_none {
+    position: relative;
+    width: auto;
+    right: auto;
+  }
+  header .content_header-center .menu_none .content_toggle-cerrar {
+    display: none;
+  }
+  header .content_header-center .menu_none .content_enlaces-secciones .enlaces ul {
+    padding: 0%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minMax(200px, 1fr));
+    gap: 5px;
+  }
+  header .content_header-center .menu_none .content_enlaces-secciones .enlaces ul li {
+    border-radius: 10px;
+    margin-top: 1rem;
+    background-color: #f4d03f;
+    padding: 10px 5px;
+    transition: 0.25s ease;
+  }
+  header .content_header-center .menu_none .content_enlaces-secciones .enlaces ul li:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 5px 1px black;
+  }
+  header .content_header-center .menu_none .content_enlaces-secciones .enlaces ul li a {
+    padding: 5px 5px 5px 0;
   }
   header .content_header-right {
     grid-column: 3/4;

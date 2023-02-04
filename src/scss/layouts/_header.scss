@@ -26,13 +26,14 @@ header{
             }
         }
         
-        .content_menu{
+        .menu{
             position: fixed;
             background-color: v.$amarillo;
             top: 0;
             bottom: 0;
             right: 0;
-            transition: .25s ease;
+            transition: 1s;
+            overflow: hidden;
             .content_toggle-cerrar{
                 text-align: end;
 
@@ -55,6 +56,7 @@ header{
                             text-align: center;
                             width: 150px;
                             border-radius: 10px;
+                            transition: .25s ease;
                             a{
                                 color: v.$blanco;
                             }
@@ -64,29 +66,103 @@ header{
             }
         }
 
-        .menu-none{
-            transition: .25s ease;
-            width: 0%;
+        .menu_none{
+            transition: .35s;
+            position: fixed;
+            right: 0;
+            width: 0;
         }
     }
 
     .content_header-right{
         grid-column: 2/3;
-        grid-row: 1;
+        grid-row: 1;            
         .content_fecha{
+            background-color: v.$rojo;
+            border-radius: 10px;
             text-align: center;
+            color: v.$blanco;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 90%;
+            margin: 0% auto;
         }
     }
 }
 
 //ENCABEZADO VERSIÓN TABLET Y DESKTOP
 header{
+    @include m.tablet{
+        .content_header-left{
+            .content_logo{
+                img{
+                    width: 150px;
+                }
+            }
+        }
+        .content_header-center{
+            .menu{
+                .content_enlaces-secciones{
+                    .enlaces{
+                        ul{
+                            li{
+                                width: 200px;
+                                transition: .25s ease;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+header{
     @include m.desktop{
+        .content_header-left{
+            text-align: center;
+        }
         .content_header-center{
             display: block;
             grid-column: 2/3;
             .content_toggle-hamburguesa{
                 display: none;
+            }
+
+            .menu_none{
+                position: relative;
+                width: auto;
+                right: auto;
+                .content_toggle-cerrar{
+                    display: none;
+                }
+
+                .content_enlaces-secciones{
+                    .enlaces{
+                        ul{
+                            padding: 0%;
+                            display: grid;
+                            grid-template-columns: repeat(auto-fit, minMax(200px, 1fr));
+                            gap: 5px;
+                            li{
+                                border-radius: 10px;
+                                margin-top: 1rem;
+                                background-color: v.$amarillo;
+                                padding: 10px 5px;
+                                transition: .25s ease;
+
+                                &:hover{
+                                    transform: scale(1.1);
+                                    box-shadow: 0 0 5px 1px v.$negro;
+                                }
+                                a{
+                                    padding: 5px 5px 5px 0;
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
 
