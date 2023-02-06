@@ -4,6 +4,7 @@
 .content_all-articulos{
     padding-top: 3rem;
     .navbar{
+        background-color: v.$grisClaro;
         .content_titulo-navbar{
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -24,7 +25,6 @@
             margin: 0% auto;
             height: 600px;
             overflow-y: scroll;
-            border-bottom: 1px solid v.$gris;
             ul{
                 padding: 0;
                 li{
@@ -93,6 +93,7 @@
     }
     .content_anuncios{
         padding: 5px;
+        background-color: v.$grisClaro;
         .content_titulo-anuncio{
             h3{
                 font-size: 2rem;
@@ -100,6 +101,53 @@
         }
         img{
             width: 100%;
+        }
+    }
+}
+
+footer{
+    .content_footer{
+        display: grid;
+        text-align: center;
+        .colum_footer{
+            video{
+                width: 150px;
+            }
+            ul{
+                padding: 0%;
+            }
+            .content_enlaces{
+                ul{
+                    display: flex;
+                    gap: 10px;
+                    justify-content: center;
+                    li{
+                        a{
+                            &:hover{
+                                color: v.$azul;
+                                text-decoration: underline;
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                }
+            }
+            .content_enlaces-redes{
+                ul{
+                    display: flex;
+                    justify-content: center;
+                    gap: 10px;
+                    li{
+                        a{
+                            transition: .25s ease;
+                            &:hover{
+                                cursor: pointer;
+                                color: v.$azul;
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }
@@ -128,9 +176,6 @@
                 }
             }
         }
-        .content_footer{
-            margin: auto;
-        }
     }
 }
 
@@ -138,5 +183,7 @@
     @include m.desktopXl{
         display: grid;
         grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 700px auto 450px;
+
     }
 }

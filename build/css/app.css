@@ -158,6 +158,9 @@ header .content_header-right .content_fecha {
 .content_all-articulos {
   padding-top: 3rem;
 }
+.content_all-articulos .navbar {
+  background-color: #f2f3f4;
+}
 .content_all-articulos .navbar .content_titulo-navbar {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -177,7 +180,6 @@ header .content_header-right .content_fecha {
   margin: 0% auto;
   height: 600px;
   overflow-y: scroll;
-  border-bottom: 1px solid #d7dbdd;
 }
 .content_all-articulos .navbar .content_enlaces-hoy ul {
   padding: 0;
@@ -231,12 +233,46 @@ header .content_header-right .content_fecha {
 }
 .content_all-articulos .content_anuncios {
   padding: 5px;
+  background-color: #f2f3f4;
 }
 .content_all-articulos .content_anuncios .content_titulo-anuncio h3 {
   font-size: 2rem;
 }
 .content_all-articulos .content_anuncios img {
   width: 100%;
+}
+
+footer .content_footer {
+  display: grid;
+  text-align: center;
+}
+footer .content_footer .colum_footer video {
+  width: 150px;
+}
+footer .content_footer .colum_footer ul {
+  padding: 0%;
+}
+footer .content_footer .colum_footer .content_enlaces ul {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+footer .content_footer .colum_footer .content_enlaces ul li a:hover {
+  color: #198edd;
+  text-decoration: underline;
+  cursor: pointer;
+}
+footer .content_footer .colum_footer .content_enlaces-redes ul {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+footer .content_footer .colum_footer .content_enlaces-redes ul li a {
+  transition: 0.25s ease;
+}
+footer .content_footer .colum_footer .content_enlaces-redes ul li a:hover {
+  cursor: pointer;
+  color: #198edd;
 }
 
 @media only screen and (min-width: 48rem) {
@@ -258,14 +294,12 @@ header .content_header-right .content_fecha {
   .content_all-articulos .navbar .content_enlaces-hoy ul {
     height: 950px;
   }
-  .content_all-articulos .content_footer {
-    margin: auto;
-  }
 }
 
 @media only screen and (min-width: 75rem) {
   .content_all-articulos {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 700px auto 450px;
   }
 }
