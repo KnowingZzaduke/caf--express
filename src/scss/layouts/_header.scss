@@ -126,6 +126,7 @@ header{
         .content_header-center{
             display: block;
             grid-column: 2/3;
+            width: 350px;
             .content_toggle-hamburguesa{
                 display: none;
             }
@@ -143,7 +144,7 @@ header{
                         ul{
                             padding: 0%;
                             display: grid;
-                            grid-template-columns: repeat(auto-fit, minMax(200px, 1fr));
+                            grid-template-columns: repeat(3, 1fr);
                             gap: 5px;
                             li{
                                 border-radius: 10px;
@@ -151,6 +152,7 @@ header{
                                 background-color: v.$amarillo;
                                 padding: 10px 5px;
                                 transition: .25s ease;
+                                text-align: center;
 
                                 &:hover{
                                     transform: scale(1.1);
@@ -168,6 +170,22 @@ header{
 
         .content_header-right{
             grid-column: 3/4;
+        }
+    }
+}
+
+header{
+    @include m.desktopXl{
+        .content_header-center{
+            .menu_none{
+                .content_enlaces-secciones{
+                    .enlaces{
+                        ul{
+                            grid-template-columns: repeat(3, 130px);
+                        }
+                    }
+                }
+            }
         }
     }
 }
