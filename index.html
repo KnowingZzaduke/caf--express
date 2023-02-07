@@ -50,6 +50,40 @@
                 </div>
             </div>
         </div>
+        <div class="content_header-center-desktop">
+            <div class="menu">
+                <div class="content_enlaces-secciones">
+                    <div class="enlaces">
+                        <ul>
+                            <li>
+                                <a href="#">Inicio</a>
+                            </li>
+                            <li>
+                                <div class="content_enlace-desplegar">
+                                    <a href="#">Categorias</a>
+                                    <i class="fa-sharp fa-solid fa-caret-right toggle_categorias-up" onclick="abrirMenuCategorias()"></i>
+                                    <i class="fa-solid fa-caret-down toggle_categorias-down" style="display: none;" onclick="cerrarMenuCategorias()"></i>
+                                </div>
+                                <ul class="categorias">
+                                    <li>
+                                        <a href="#">Política</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Deportes</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Internacional</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Nacional</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="content_header-right">
             <div class="content_fecha">
                 <p>3/02/2023</p>
@@ -62,7 +96,8 @@
         <nav class="navbar">
             <div class="content_titulo-navbar">
                 <h3>Lo de hoy</h3>
-                <i class="fa-sharp fa-solid fa-caret-right"></i>
+                <i class="fa-sharp fa-solid fa-caret-right toggle_enlaces-up" onclick="abrirEnlaces()"></i>
+                <i class="fa-solid fa-caret-down toggle_enlaces-down" style="display: none;" onclick="cerrarEnlaces()"></i>
             </div>
 
             <div class="content_enlaces-hoy">
@@ -162,7 +197,7 @@
     <footer>
         <div class="content_footer">
             <div class="colum_footer">
-                <video src="src/video/Café Express.mp4" autoplay></video>
+                <video src="src/video/Café Express-black.mp4" autoplay></video>
             </div>
             <div class="colum_footer">
                 <div class="content_enlaces">
