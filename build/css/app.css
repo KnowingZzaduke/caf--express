@@ -101,10 +101,6 @@ header .content_header-right .content_fecha {
   header .content_header-left .content_logo img {
     width: 150px;
   }
-  header .content_header-center .menu .content_enlaces-secciones .enlaces ul li {
-    width: 200px;
-    transition: 0.25s ease;
-  }
 }
 
 @media only screen and (min-width: 48rem) {
@@ -129,33 +125,9 @@ header .content_header-right .content_fecha {
   }
   header .content_header-center .menu_none .content_enlaces-secciones .enlaces ul {
     padding: 0%;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 5px;
-  }
-  header .content_header-center .menu_none .content_enlaces-secciones .enlaces ul li {
-    border-radius: 10px;
-    margin-top: 1rem;
-    background-color: #f4d03f;
-    padding: 10px 5px;
-    transition: 0.25s ease;
-    text-align: center;
-  }
-  header .content_header-center .menu_none .content_enlaces-secciones .enlaces ul li:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 5px 1px black;
-  }
-  header .content_header-center .menu_none .content_enlaces-secciones .enlaces ul li a {
-    padding: 5px 5px 5px 0;
   }
   header .content_header-right {
     grid-column: 3/4;
-  }
-}
-
-@media only screen and (min-width: 75rem) {
-  header .content_header-center .menu_none .content_enlaces-secciones .enlaces ul {
-    grid-template-columns: repeat(3, 130px);
   }
 }
 
