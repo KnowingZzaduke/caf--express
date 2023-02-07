@@ -8,6 +8,7 @@ html {
 body {
   font-family: "Open Sans", sans-serif;
   margin: 0%;
+  padding: 10px;
 }
 
 ul, li {
@@ -242,6 +243,7 @@ header .content_header-right .content_fecha {
 }
 .content_all-articulos .articulos article {
   padding: 5px;
+  text-align: center;
 }
 .content_all-articulos .articulos article .content_encabezado-articulo .content_img-encabezado-articulo img {
   width: 100%;
