@@ -26,29 +26,19 @@ function abrirEnlaces(){
     if(toggleEnlacesUp){
         toggleEnlacesUp.style.display = "none";
         toggleEnlacesDown.style.display = "block";
-        contentEnlaces.classList.add('enlaces_mostrar');
+        contentEnlaces.classList.add('mostrar_enlaces-hoy');
     }
 }
 
 //CERRAR ENLACES
+let clientWidth = screen.width;
 function cerrarEnlaces(){
     if(toggleEnlacesDown){
         toggleEnlacesUp.style.display = "block";
         toggleEnlacesDown.style.display = "none";
-        contentEnlaces.classList.remove('enlaces_mostrar');
+        contentEnlaces.classList.remove('mostrar_enlaces-hoy');
     }
 }
-
-let clientWidth = screen.width;
-function eliminarToggles(){
-    if(clientWidth >= 768){
-        toggleEnlacesUp.style.display = "none";
-        toggleEnlacesDown.style.display = "none";
-        contentEnlaces.classList.add('enlaces_mostrar-desktop')
-    }
-}
-let comprobarTamañoDesktop = setInterval(eliminarToggles, 0)
-
 
 //DISPOSITIVOS GRANDES
 const toggleCategoriasUp = document.querySelector('.toggle_categorias-up');
