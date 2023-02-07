@@ -19,6 +19,10 @@ a {
   color: black;
 }
 
+hr {
+  color: #f2f3f4;
+}
+
 header {
   background-color: white;
   display: grid;
@@ -242,6 +246,9 @@ header .content_header-right .content_fecha {
   width: 100%;
 }
 
+footer {
+  background-color: black;
+}
 footer .content_footer {
   display: grid;
   text-align: center;
@@ -252,10 +259,16 @@ footer .content_footer .colum_footer video {
 footer .content_footer .colum_footer ul {
   padding: 0%;
 }
+footer .content_footer .colum_footer ul li a {
+  color: white;
+}
 footer .content_footer .colum_footer .content_enlaces ul {
   display: flex;
   gap: 10px;
   justify-content: center;
+}
+footer .content_footer .colum_footer .content_enlaces ul li a i {
+  filter: invert(100);
 }
 footer .content_footer .colum_footer .content_enlaces ul li a:hover {
   color: #198edd;
@@ -279,9 +292,10 @@ footer .content_footer .colum_footer .content_enlaces-redes ul li a:hover {
   .content_all-articulos {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 700px auto 250px;
+    grid-template-rows: 700px auto auto auto 300px;
   }
   .content_all-articulos .navbar {
+    background-color: white;
     grid-row: 900px;
   }
   .content_all-articulos .navbar .content_titulo-navbar {
@@ -291,15 +305,85 @@ footer .content_footer .colum_footer .content_enlaces-redes ul li a:hover {
   .content_all-articulos .navbar .content_titulo-navbar i {
     display: none;
   }
+  .content_all-articulos .navbar .content_enlaces-hoy {
+    border: 2px solid #d7dbdd;
+    border-radius: 5px;
+    scrollbar-color: #d7dbdd;
+    scrollbar-gutter: stable both-edges;
+    scrollbar-width: thin;
+  }
+  .content_all-articulos .navbar .content_enlaces-hoy::-webkit-scrollbar {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }
+  .content_all-articulos .navbar .content_enlaces-hoy::-webkit-scrollbar:vertical {
+    width: 13px;
+  }
+  .content_all-articulos .navbar .content_enlaces-hoy::-webkit-scrollbar-button:increment, .content_all-articulos .navbar .content_enlaces-hoy .lista_carrito::-webkit-scrollbar-button {
+    display: none;
+  }
+  .content_all-articulos .navbar .content_enlaces-hoy::-webkit-scrollbar:horizontal {
+    height: 10px;
+  }
+  .content_all-articulos .navbar .content_enlaces-hoy::-webkit-scrollbar-thumb {
+    background-color: #797979;
+    border-radius: 20px;
+    border: 2px solid #f1f2f3;
+  }
+  .content_all-articulos .navbar .content_enlaces-hoy::-webkit-scrollbar-track {
+    border-radius: 10px;
+  }
   .content_all-articulos .navbar .content_enlaces-hoy ul {
     height: 950px;
+  }
+  .content_all-articulos .content_anuncios {
+    background-color: white;
+  }
+  .content_all-articulos .content_anuncios .content_titulo-anuncio {
+    text-align: center;
   }
 }
 
 @media only screen and (min-width: 75rem) {
   .content_all-articulos {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 700px auto 450px;
+    grid-template-columns: repeat(3, 350px 700px 350px);
+    grid-template-rows: auto;
+  }
+  .content_all-articulos .navbar {
+    background-color: white;
+    scrollbar-gutter: stable both-edges;
+    scrollbar-width: thin;
+  }
+  .content_all-articulos .navbar .content_titulo-navbar {
+    background-color: white;
+    border-radius: 0px;
+  }
+  .content_all-articulos .navbar .content_enlaces-hoy {
+    scrollbar-color: #d7dbdd white;
+  }
+  .content_all-articulos .navbar::-webkit-scrollbar {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }
+  .content_all-articulos .navbar::-webkit-scrollbar:vertical {
+    width: 13px;
+  }
+  .content_all-articulos .navbar::-webkit-scrollbar-button:increment, .content_all-articulos .navbar .lista_carrito::-webkit-scrollbar-button {
+    display: none;
+  }
+  .content_all-articulos .navbar::-webkit-scrollbar:horizontal {
+    height: 10px;
+  }
+  .content_all-articulos .navbar::-webkit-scrollbar-thumb {
+    background-color: #797979;
+    border-radius: 20px;
+    border: 2px solid #f1f2f3;
+  }
+  .content_all-articulos .navbar::-webkit-scrollbar-track {
+    border-radius: 10px;
+  }
+  .content_all-articulos .content_anuncios {
+    background-color: white;
   }
 }

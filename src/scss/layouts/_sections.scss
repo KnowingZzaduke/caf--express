@@ -104,8 +104,8 @@
         }
     }
 }
-
 footer{
+    background-color: v.$negro;
     .content_footer{
         display: grid;
         text-align: center;
@@ -115,6 +115,11 @@ footer{
             }
             ul{
                 padding: 0%;
+                li{
+                    a{
+                        color: v.$blanco;
+                    }
+                }
             }
             .content_enlaces{
                 ul{
@@ -123,6 +128,9 @@ footer{
                     justify-content: center;
                     li{
                         a{
+                            i{
+                                filter: invert(100);
+                            }
                             &:hover{
                                 color: v.$azul;
                                 text-decoration: underline;
@@ -158,8 +166,9 @@ footer{
     @include m.desktop{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: 700px auto 250px;
+        grid-template-rows: 700px auto auto auto 300px;
         .navbar{
+            background-color: v.$blanco;
             grid-row: 900px;
             .content_titulo-navbar{
                 display: grid;
@@ -171,9 +180,47 @@ footer{
             }
 
             .content_enlaces-hoy{
+                border: 2px solid v.$gris;
+                border-radius: 5px;
+                scrollbar-color: v.$gris;
+                scrollbar-gutter: stable both-edges;
+                scrollbar-width: thin;
+                &::-webkit-scrollbar {
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                }
+
+                &::-webkit-scrollbar:vertical {
+                    width: 13px;
+                }
+
+                &::-webkit-scrollbar-button:increment,.lista_carrito::-webkit-scrollbar-button {
+                    display: none;
+                } 
+
+                &::-webkit-scrollbar:horizontal {
+                    height: 10px;
+                }
+                
+                &::-webkit-scrollbar-thumb {
+                    background-color: #797979;
+                    border-radius: 20px;
+                    border: 2px solid #f1f2f3;
+                }
+
+                &::-webkit-scrollbar-track {
+                    border-radius: 10px;  
+                }
+
                 ul{
                     height: 950px;
                 }
+            }
+        }
+        .content_anuncios{
+            background-color: v.$blanco;
+            .content_titulo-anuncio{
+                text-align: center;
             }
         }
     }
@@ -182,8 +229,52 @@ footer{
 .content_all-articulos{
     @include m.desktopXl{
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: 700px auto 450px;
+        grid-template-columns: repeat(3, 350px 700px 350px);
+        grid-template-rows: auto;
+        .navbar{
+            background-color: v.$blanco;
+            .content_titulo-navbar{
+                background-color: v.$blanco;
+                border-radius: 0px;
+            }
+            .content_enlaces-hoy{
+                scrollbar-color: v.$gris white;
+            }
+            scrollbar-gutter: stable both-edges;
+            scrollbar-width: thin;
+            &::-webkit-scrollbar {
+                -webkit-appearance: none;
+                -moz-appearance: none;
+            }
 
+            &::-webkit-scrollbar:vertical {
+                width: 13px;
+            }
+
+            &::-webkit-scrollbar-button:increment,.lista_carrito::-webkit-scrollbar-button {
+                display: none;
+            } 
+
+            &::-webkit-scrollbar:horizontal {
+                height: 10px;
+            }
+            
+            &::-webkit-scrollbar-thumb {
+                background-color: #797979;
+                border-radius: 20px;
+                border: 2px solid #f1f2f3;
+            }
+
+            &::-webkit-scrollbar-track {
+                border-radius: 10px;  
+            }
+        }
+        .articulos{
+            
+        }
+
+        .content_anuncios{
+            background-color: v.$blanco;
+        }
     }
 }
