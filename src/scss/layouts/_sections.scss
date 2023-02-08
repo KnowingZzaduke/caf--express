@@ -3,6 +3,10 @@
 
 .content_all-articulos{
     padding-top: 3rem;
+    background-color: transparent;
+    img{
+        box-shadow: 0 0 5px 1px v.$negro;
+    }
     .navbar{
         background-color: v.$grisClaro;
         padding: 2rem;
@@ -88,13 +92,9 @@
             }
             .contenido_principal{
                 .content_img-contenido-principal{
-                    display: flex;
-                    gap: 3px;
                     img{
                         width: 100%;
                     }
-                }
-                .content_parrafo-contenido-principal{
                 }
             }
         }

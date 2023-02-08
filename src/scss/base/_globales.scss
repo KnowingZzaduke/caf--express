@@ -9,9 +9,21 @@ html{
 body{
     font-family: 'Open Sans', sans-serif;
     margin: 0%;
-    padding: 10px;
+    position: relative;
 }
 
+.video_tierra{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 105%;
+    min-height: 100%;
+    transform: translateX(calc((100% - 100vw) / 2));
+    z-index: -3;
+}
+header, .content_all-articulos{
+    padding: 10px;
+}
 ul,li{
     list-style: none;
 }
@@ -23,5 +35,9 @@ a{
 
 hr{
     color: v.$grisClaro;
+}
+
+img{
+    border-radius: 10px;
 }
 
