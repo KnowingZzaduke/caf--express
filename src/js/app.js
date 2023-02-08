@@ -31,7 +31,6 @@ function abrirEnlaces(){
 }
 
 //CERRAR ENLACES
-let clientWidth = screen.width;
 function cerrarEnlaces(){
     if(toggleEnlacesDown){
         toggleEnlacesUp.style.display = "block";
@@ -62,5 +61,4 @@ function cerrarMenuCategorias(){
         toggleCategoriasDown.style.display = "none";
     }
 }
-
 

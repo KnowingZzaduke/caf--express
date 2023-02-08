@@ -1,0 +1,56 @@
+@use '../base/variables' as v;
+footer{
+    background-color: v.$negro;
+    .content_footer{
+        display: grid;
+        text-align: center;
+        .colum_footer{
+            video{
+                width: 150px;
+            }
+            ul{
+                padding: 0%;
+                li{
+                    a{
+                        color: v.$blanco;
+                    }
+                }
+            }
+            .content_enlaces{
+                ul{
+                    display: flex;
+                    gap: 10px;
+                    justify-content: center;
+                    li{
+                        a{
+                            i{
+                                filter: invert(100);
+                            }
+                            &:hover{
+                                color: v.$azul;
+                                text-decoration: underline;
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                }
+            }
+            .content_enlaces-redes{
+                ul{
+                    display: flex;
+                    justify-content: center;
+                    gap: 10px;
+                    li{
+                        a{
+                            transition: .25s ease;
+                            &:hover{
+                                cursor: pointer;
+                                color: v.$azul;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
